@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { View } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 
 const App = () => {
     const [data, setData] = useState(null);
@@ -19,10 +19,10 @@ const App = () => {
     }, []);
 
     return (
-        <View>
+        <ScrollView>
             <Text>API Data</Text>
             <Text>{JSON.stringify(data, null, 2)}</Text>
-        </View>
+        </ScrollView>
     );
 }
 
